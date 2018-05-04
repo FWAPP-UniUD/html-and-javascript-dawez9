@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prima esercitazione: esercizio 10</title>
+    </head>
+    <body>
+        <h1>Exercise 10</h1>
+        <form name="Form">
+            Are you ready to write? <input type="checkbox" name="Check" id="box" onclick="Modify()"><br>
+            <fieldset id="fields" disabled>
+                <legend>Personal Data:</legend>
+                Name: <input type="text" name="Nome"><br>
+                Surname: <input type="text" name="Cognome"><br>
+                Sex: <input type="radio" name="sex" value="M">Male<input type="radio" name="sex" value="F">Female<br>
+                Date Of birth: <input type="date" name="Data"><br>
+            </fieldset>
+        </form>
+
+        <script>
+        function Modify() {
+            if(document.getElementById("box").checked) {
+                document.getElementById("fields").disabled = false;}
+            else {
+                document.getElementById("fields").disabled = true;}
+        }              
+        </script>
+        
+    </body>
+</html>

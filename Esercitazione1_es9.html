@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prima esercitazione: esercizio 9</title>
+    </head>
+    <body>
+        <h1>Exercise 9</h1>
+        <button type="buttonhide" onclick="Nascondi()">Hide</button><br><br>
+        <button type="buttonseek" onclick="Scrivi()">Seek</button><br>
+        <div id="placeholder"></div>
+
+        <script>
+        function Scrivi() {
+        var element = document.getElementById("placeholder");
+        if (!element.hasChildNodes()) {
+        var para = document.createElement("p");
+        var node = document.createTextNode("Lorem Ipsum...");
+        para.appendChild(node);
+        element.appendChild(para); }
+        }
+        
+        function Nascondi() {
+        var element = document.getElementById("placeholder");
+        if (element.hasChildNodes()) {
+        element.firstChild.style.visibility = "hidden"; }
+        }
+        </script>
+
+    </body>
+</html>
